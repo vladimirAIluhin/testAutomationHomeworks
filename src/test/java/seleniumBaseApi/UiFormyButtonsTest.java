@@ -6,10 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public class UiFormyButtonsTest {
-    WebDriver chromeDriver;
+    private WebDriver chromeDriver;
 
     @BeforeClass
-    public void createDriver() {
+    public void setupEnvironmentAndCreateNewChromeDriver() {
         chromeDriver = new ChromeDriver();
         chromeDriver.get("https://formy-project.herokuapp.com/buttons");
     }
@@ -89,6 +89,7 @@ public class UiFormyButtonsTest {
         chromeDriver.findElement(By.cssSelector("#btnGroupDrop1")).click();
         chromeDriver.findElement(By.xpath("//div[@aria-labelledby='btnGroupDrop1']/a[contains(@class,'dropdown-item') and text()='Dropdown link 1']")).click();
     }
+
     @Test(dependsOnMethods={"testDropdownLink1Button"})
     public void testDropdownLink2Button() {
         chromeDriver.findElement(By.cssSelector("#btnGroupDrop1")).click();

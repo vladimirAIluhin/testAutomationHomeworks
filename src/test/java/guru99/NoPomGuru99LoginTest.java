@@ -15,7 +15,6 @@ public class NoPomGuru99LoginTest {
     public void createDriver() {
         chromeDriver = new ChromeDriver();
         chromeDriver.get("http://demo.guru99.com/V4/");
-
     }
 
     @AfterTest

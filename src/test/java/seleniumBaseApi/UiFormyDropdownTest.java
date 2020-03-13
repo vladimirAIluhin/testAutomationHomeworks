@@ -19,7 +19,7 @@ public class UiFormyDropdownTest {
 
 
     @BeforeClass
-    public void createDriver() {
+    public void setupEnvironmentAndCreateNewChromeDriver() {
         chromeDriver = new ChromeDriver();
 
     }
